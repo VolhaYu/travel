@@ -83,33 +83,35 @@ const arrowRight = document.querySelectorAll('.arrow-right');
 const ellipse = document.querySelectorAll('.ellipse');
   // Desktop
 
-
-slide1.addEventListener('click', () => {
-    slider.classList.add('active-Left');
-    slider.classList.remove('active-center','active-right');
-    activeEllipse(index);
-    ellipse[1].classList.add('ellipse-non-active');
-
-});
-slide1.addEventListener('animationend', () => {
-    slider.classList.remove('active-Left');
-})
-slide2.addEventListener('click', () => {
-    slider.classList.add('active-center');
-    slider.classList.remove('active-Left', 'active-right');
-    ellipse[1].classList.add('ellipse-active');
-    ellipse[1].classList.remove('ellipse-non-active');
-    ellipse[0].classList.remove('ellipse-active');
-    ellipse[2].classList.remove('ellipse-active');
-});
-slide3.addEventListener('click', () => {
-    slider.classList.add('active-right');
-    slider.classList.remove('active-center','active-left');
-    ellipse[2].classList.add('ellipse-active');
-    ellipse[1].classList.remove('ellipse-active');
-    ellipse[1].classList.add('ellipse-non-active');
-    ellipse[0].classList.remove('ellipse-active');
-});
+  console.log(window.innerWidth);
+if (window.innerWidth > 766) {
+  slide1.addEventListener('click', () => {
+      slider.classList.add('active-Left');
+      slider.classList.remove('active-center','active-right');
+      activeEllipse(index);
+      ellipse[1].classList.add('ellipse-non-active');
+  
+  });
+  slide1.addEventListener('animationend', () => {
+      slider.classList.remove('active-Left');
+  })
+  slide2.addEventListener('click', () => {
+      slider.classList.add('active-center');
+      slider.classList.remove('active-Left', 'active-right');
+      ellipse[1].classList.add('ellipse-active');
+      ellipse[1].classList.remove('ellipse-non-active');
+      ellipse[0].classList.remove('ellipse-active');
+      ellipse[2].classList.remove('ellipse-active');
+  });
+  slide3.addEventListener('click', () => {
+      slider.classList.add('active-right');
+      slider.classList.remove('active-center','active-left');
+      ellipse[2].classList.add('ellipse-active');
+      ellipse[1].classList.remove('ellipse-active');
+      ellipse[1].classList.add('ellipse-non-active');
+      ellipse[0].classList.remove('ellipse-active');
+  });
+}
   // mobile
 
 let index = 0;
