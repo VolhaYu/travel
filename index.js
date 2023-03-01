@@ -30,7 +30,9 @@ document.addEventListener('click', e => {
 
   // pop-up
 
-const login = document.querySelectorAll('.login-click');
+const login = document.querySelector('.login-click');
+const account = document.querySelector('.account');
+console.log(login, account);
 const popup = document.querySelector('.pop-up');
 const popupcontent = document.querySelector('.pop-up-content');
 const signup = document.querySelector('.sign-up');
@@ -38,12 +40,15 @@ const register = document.querySelectorAll('.register');
 const form = document.querySelectorAll('.form-sabmit');
 const signIn = document.querySelectorAll('.sign-in');
 const input = document.querySelectorAll('.input');
-  
-for(let i = 0; i < login.length; i++) {
-    login[i].addEventListener('click', () => {
-        popup.classList.add('pop-up-active');
-    });
-};
+
+function showPopup(clickLocation) {
+  clickLocation.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('click');
+    popup.classList.add('pop-up-active');
+  });
+}
+showPopup(account);
 popup.addEventListener('click', event => {
     if(event.target.classList.contains('pop-up')) {
         popup.classList.toggle('pop-up-active');
@@ -78,42 +83,48 @@ const slides = document.querySelectorAll('.destination');
 const slide1 = document.querySelector('.destination1');
 const slide2 = document.querySelector('.destination2');
 const slide3 = document.querySelector('.destination3');
+const img = document.querySelector('.img-dest');
 const arrowLeft = document.querySelectorAll('.arrow-left');
 const arrowRight = document.querySelectorAll('.arrow-right');
 const ellipse = document.querySelectorAll('.ellipse');
-  // Desktop
 
-  console.log(window.innerWidth);
-if (window.innerWidth > 766) {
+  // Desktop
+const width = img.width;
+
+function sliderDecstop() {
   slide1.addEventListener('click', () => {
-      slider.classList.add('active-Left');
-      slider.classList.remove('active-center','active-right');
-      activeEllipse(index);
-      ellipse[1].classList.add('ellipse-non-active');
-  
+    slides.forEach(slide => {
+      slide.style.transform=`translateX(${width}px)`;
+    });
+    activeEllipse(index);
+    ellipse[1].classList.add('ellipse-non-active');  
   });
-  slide1.addEventListener('animationend', () => {
-      slider.classList.remove('active-Left');
-  })
   slide2.addEventListener('click', () => {
-      slider.classList.add('active-center');
-      slider.classList.remove('active-Left', 'active-right');
-      ellipse[1].classList.add('ellipse-active');
-      ellipse[1].classList.remove('ellipse-non-active');
-      ellipse[0].classList.remove('ellipse-active');
-      ellipse[2].classList.remove('ellipse-active');
+    slides.forEach(slide => {
+      slide.style.transform=`translateX(0px)`;
+    });
+    ellipse[1].classList.add('ellipse-active');
+    ellipse[1].classList.remove('ellipse-non-active');
+    ellipse[0].classList.remove('ellipse-active');
+    ellipse[2].classList.remove('ellipse-active');
   });
   slide3.addEventListener('click', () => {
-      slider.classList.add('active-right');
-      slider.classList.remove('active-center','active-left');
-      ellipse[2].classList.add('ellipse-active');
-      ellipse[1].classList.remove('ellipse-active');
-      ellipse[1].classList.add('ellipse-non-active');
-      ellipse[0].classList.remove('ellipse-active');
+    slides.forEach(slide => {
+      slide.style.transform=`translateX(-${width}px)`;
+    });
+    ellipse[2].classList.add('ellipse-active');
+    ellipse[1].classList.remove('ellipse-active');
+    ellipse[1].classList.add('ellipse-non-active');
+    ellipse[0].classList.remove('ellipse-active');
   });
 }
-  // mobile
 
+if (window.innerWidth > 766) {
+  showPopup(login);
+  sliderDecstop();
+}
+
+  // mobile
 let index = 0;
 const activeSlide = n => {
     for(slide of slides) {
