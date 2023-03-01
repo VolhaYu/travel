@@ -5,9 +5,10 @@ html {
 body {
     box-sizing: border-box;
     width: 100%;
-    background:
-     url(../assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) top no-repeat,
-     url(../assets/img/Rectangle33.jpg) bottom no-repeat;
+    background: 
+      url(../assets/img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) top no-repeat,
+      url(../assets/img/Rectangle33.jpg) bottom no-repeat;
+    background-size: 100% 20.5%, 100% 35.5%;
 }
 /* шапка */
 
@@ -36,7 +37,7 @@ body {
 }
 .nav-list {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;    
@@ -89,7 +90,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 3000;
     top: -1440px;
     left: 0;
@@ -98,7 +99,7 @@ body {
 .pop-up-content {
     position: absolute;
     z-index: 3000;
-    width: 650px;
+    width: 600px;
     height: 660px;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -530,7 +531,7 @@ h3 {
 
 .footer {
     height: 61px;
- }
+}
 .wrap-footer {
     display: flex;
     justify-content: space-between; 
@@ -567,9 +568,9 @@ h3 {
 @media screen and (max-width: 1200px) {    
     body {
         background:
-     url(../assets/img_mobile/garrett-parker-DlkF4-dbCOU-unsplash_2.jpg) top no-repeat,
-     url(../assets/img_mobile/Rectangle_28.jpg) bottom no-repeat;
-        background-size: 100% 17%, 100% 40%;
+      url(../assets/img_mobile/garrett-parker-DlkF4-dbCOU-unsplash_2.jpg) top no-repeat,
+      url(../assets/img_mobile/Rectangle_28.jpg) bottom no-repeat;
+        background-size: 100% 17%, 100% 37%;
     }
     .logo {
         padding-left: 60px;
@@ -606,9 +607,19 @@ h3 {
     }
 }
 
+@media screen and (max-width: 1080px) {
+    body {
+      background-size:100% 17%, 100% 39%; 
+  }
+}
+@media screen and (max-width: 1018px) {
+    body {
+      background-size:100% 17%, 100% 41%; 
+  }
+}
 @media screen and (max-width: 991px) {
     body {
-        background-size:100%, 100%; 
+        background-size:100% 18.5%, 100% 38%; 
     }
     .logo {
         padding-left: 10px;
@@ -638,7 +649,6 @@ h3 {
     }
     .img-dest{
         width: 550px;
-
     }
     .img-story {
         width: 250px;
@@ -655,48 +665,24 @@ h3 {
     } 
 }
 
-@media screen and (max-width: 767px) {
-    .nav-link a {
-        margin-right: 5px;
-    }
-    h1 {
-        font-size: 40px;
-        line-height: normal;
-    }
-    .text-preview {
-        line-height: normal;
-    }
-    .steps {
-        width: 98%;
-        margin: 0 auto;
-        height: auto;
-        margin-top: 80px;
-        margin-bottom: 80px;
-    }
-    .p-steps {
-        padding-left: 10px;
-        font-size: 16px;
-    }
-    .img-frames {
-        padding-left: 40px;
-    }
-    .img-story {
-        width: 155px;
-        height: 130px;
-    }
-}
-@media screen and (max-width: 650px) {
-    .pop-up-content {
-        width: 100%;
-    }
+@media screen and (max-width: 906px) {
+  .nav-link a {
+    margin-right: 18px
+  }
+  h1 {
+    font-size: 70px;
+  }
 }
 
-@media screen and (max-width: 390px) { 
+@media screen and (max-width: 767px) {
+  body {
+    background-size: 100% 16.5%, 100% 44.5%;
+}
     .header {
-        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 90%);
-        box-shadow: none;
-        height: 32px;
-        padding-top: 43px;
+      background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 90%);
+      box-shadow: none;
+      height: 32px;
+      padding-top: 43px;
     } 
     .wrap-header, .preview, .stories {
         padding: 0 15px 0;
@@ -794,11 +780,236 @@ h3 {
         display: block;
     }
     .form-log {
-        display: none;
+      display: none;
     }
-    h1, .text-preview  {
-        display: none;
+    .wrap-preview {
+      padding-top: 67px;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: normal;
+    }
+    .text-preview {
+        line-height: normal;
+    }
+    .steps {
+        width: 98%;
+        margin: 0 auto;
+        height: auto;
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+    .p-steps {
+        padding-left: 10px;
+        font-size: 16px;
+        text-align: center;
+        width: 85%;
+    }
+    .img-frames {
+        padding-left: 40px;
+    }
+    .img3 {
+        padding-left: 70px;
+    }
+    .img-story {
+        width: 155px;
+        height: 130px;
+    }
+    .wrap-destinations {
+      margin-top: 35px; 
+      position: relative; 
+      justify-content: flex-start;
+      padding: 0;
+    }
+    .destination {
+      display: none;
+    }
+    .img-destination {
+      margin-right: 0;
+    }
+    .img-dest {
+        max-width: 660px;
+        height: 410px;
+    }
+    .destination-active {       
+        display: block;
+        transition: 2s;
+        margin: 0 auto;
+    }
+    .country {
+        left: 15px;
+        top: 8px;
+    }
+    .p-country {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .arrow {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 5%;
+        top: 1040px;
+        z-index: 1000;
+    }  
+    .arrow-non-active {
+        opacity: 0.5;
+    }      
+    .wrap-ellipse {
+        position: absolute;
+        left: 47%;
+        top: 1220px;
+    }
+    .ellipse {
+        width: 8px;
+        height: 8px;
+        margin: 0 6px 0 0;
+        background: rgba(242, 120, 92, 0.5);
+    }
+    .ellipse-active {
+        background: #F2785C;
+    } 
+    .butt-destination {
+      margin: 20px 0 30px;
+    }
+    .wrap-stories,
+    .story1 {
+      margin-top: 0;
+    }
+}
 
+@media screen and (max-width: 686px) {
+    body {
+      background-size: 100% 16%, 100% 45.5%;
+    }
+    .pop-up-content {
+        width: 80%;
+    }
+    h1 {
+      font-size: 38px;
+      margin-bottom: 0;
+    }
+    .search {
+      height: 80px;
+    }
+    .text-search {
+      font-size: 20px;
+    }
+    .h2 {
+      font-size: 28px;
+    }
+    .h3 {
+      font-size: 26px;
+    }
+    .p-story {
+      font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 644px) {
+    body {
+      background-size: 100% 14.5%, 100% 49%;
+    }
+}
+
+@media screen and (max-width: 603px) {
+    body {
+      background-size: 100% 17%, 100% 51%;
+    }
+    h1 {
+      font-size: 34px;
+    }
+    .text-preview,
+    .text-search {
+      font-size: 18px;
+    }
+    .butt-search {
+      width: 180px;
+      font-size: 18px;
+    }
+    .steps {
+      margin: 50px 0 40px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    .wrap-frame {
+      width: 94%;
+      margin-top: 30px;
+    }
+    .frame {
+      width: 30%;
+      margin: 0 auto;
+      display: block;
+      padding-left: 0;
+    }
+    .img-frames {
+      width: 85px;
+      margin: 0 auto;
+      display: block;
+      padding-left: 0;
+    }
+    .p-steps {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    .img-story {
+      margin-top: 15px;
+    }
+    .img-dest {
+      width: 390px;
+      height: 300px;
+    }
+    .arrow {
+      top: 888px;
+    }
+    .wrap-ellipse {
+      top: 1020px;
+    }
+    .h2-stories {
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    .p-story {
+      margin: 0;
+    }
+}
+
+@media screen and (max-width: 544px) {
+  body {
+    background-size: 100% 13%, 100% 56.6%;
+  }
+  .pop-up-content {
+    width: 90%;
+  }
+  .pop-up-container {
+    width: 94%;
+  }
+  h1 {
+    margin-bottom: 50px;
+  }
+  .text-preview  {
+    display: none;
+  }
+  .arrow {
+    top: 828px;
+  }
+  .wrap-ellipse {
+    top: 970px;
+  }
+}
+
+@media screen and (max-width: 465px) { 
+    body {
+      background-size: 100% 14%, 100% 44.5%;
+    }
+    h1, 
+    .text-preview  {
+        display: none;
     }
     .wrap-preview {
         width: 100%;
@@ -826,7 +1037,7 @@ h3 {
     }
     .steps {
         width: 92%;
-        margin-bottom: 20px;
+        margin: 50px auto 20px;
     }
     h2, .h2-stories {
         font-weight: 500;
@@ -871,56 +1082,16 @@ h3 {
         padding-left: 0;
         font-weight: 400;
         font-size: 10px;
-        line-height: 12px;
-        
+        line-height: 12px;        
     }
     .frame3 :last-child {
         text-align: right;
     }
-    .wrap-destinations {
-        margin-top: 0; 
-        position: relative; 
-        justify-content: flex-start;
-        padding-left: 15px;
-    }   
-    .img-destination {
-        height: 210px;
-    }
-    .img-dest {
-        max-width: 360px;
-        height: 210px;
-    }
-    .destination {
-        display: none;
-    }
-    .destination-active {       
-        display: block;
-        transition: 2s;
-    }
-    .country {
-        left: 15px;
-        top: 8px;
-    }
-    .p-country {
-        font-size: 20px;
-        line-height: 26px;
-    }
     .arrow {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        left: 20px;
-        top: 573px;
-        z-index: 1000;
-    }  
-    .arrow-non-active {
-        opacity: 0.5;
-    }      
+      top: 617px;
+    }
     .wrap-ellipse {
-        position: absolute;
-        left: 177px;
-        top: 673px;
+      top: 747px;
     }
     .ellipse {
         width: 8px;
@@ -930,13 +1101,7 @@ h3 {
     }
     .ellipse-active {
         background: #F2785C;
-    }
-    /* .ellipse1 {
-        background: #F2785C;
-    }
-    .ellipse2 {
-        background: rgba(242, 120, 92, 0.5);
-    } */
+    } 
     .butt-destination {
         margin: 10px 0 20px;
     }
@@ -981,5 +1146,29 @@ h3 {
     }
     .soc-list {
         padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    body {
+      background-size: 100% 15%, 100% 47%;
+    }
+    .h3-pop-up {
+      font-size: 28px;
+    }
+    .img-destination {
+        height: 210px;
+    }
+    .img-dest {
+        max-width: 360px;
+        height: 210px;
+    }
+    .arrow {
+        left: 20px;
+        top: 573px;
+    }  
+    .wrap-ellipse {
+        left: 177px;
+        top: 673px;
     }
 }
