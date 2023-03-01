@@ -369,6 +369,9 @@ h2 {
     margin-top: 46px;
     position: relative;  
 }
+.destination {
+  transition: 2s;
+}
 .active-Left {
     transform: translateX(860px);
     overflow: visible;
@@ -386,25 +389,13 @@ h2 {
 }
 .img-destination {
     margin-right: 60px; 
-
+    transition: 2s;
 }
 .img-dest {
     border-radius: 16px;
 }
 .destination {
     position: relative;
-}
-.destination1-activ {
-    order: 1;
-    transition: 1s;
-}
-.destination2-activ {
-    order: -1;
-    transition: 1s;
-}
-.destination3-activ {
-    order: -2;
-    transition: 1s;
 }
 .country {
     position: absolute;
@@ -423,6 +414,7 @@ h2 {
 }
 .arrow {
     display: none;
+    cursor: pointer;
 }
 .wrap-ellipse {
     display: flex;
